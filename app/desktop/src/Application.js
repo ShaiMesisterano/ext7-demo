@@ -16,10 +16,12 @@ Ext.define('MyExtGenApp.Application', {
         // Ext.Viewport.add([{xtype: whichView}])
         const panel = Ext.create('Ext.panel.Panel', {
             layout: 'fit',
+            width: '100%',
+            height: '100%',
             renderTo: Ext.Element.get('extjs_app'),
             items: [{xtype: whichView}]
         });
-        Ext.Viewport.add(panel);
+        // Ext.Viewport.add(panel);
     },
 
     onAppUpdate: function () {

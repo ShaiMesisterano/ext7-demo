@@ -42,7 +42,7 @@ const Wrapper = ({ children }) => {
 
     return (
         <Provider store={store}>
-            <div id="extjs_app" style={{ border: 'solid 5px red' }}>
+            <div id="extjs_app" style={{ border: 'solid 5px red', width: '100%', height: '100%' }}>
                 <Counter />
                 <div className="launching">
                     <div id="splash">
