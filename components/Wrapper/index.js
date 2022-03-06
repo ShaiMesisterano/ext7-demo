@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import store from './store';
-import {Provider} from 'react-redux';
-import {Counter} from "../../components";
+import { Provider } from 'react-redux';
+import { Counter } from "../../components";
 
-const Wrapper = ({children}) => {
+const Wrapper = ({ children }) => {
     console.log('*** Hello from wrapper');
 
     // useEffect(() => {
@@ -42,14 +42,12 @@ const Wrapper = ({children}) => {
 
     return (
         <Provider store={store}>
-            <div style={{border: 'solid 5px red'}}>
-                <div id="extjs_app">
-                    <Counter/>
-                    <div className="launching">
-                        <div id="splash">
-                            <div id="theLoadingText">LOADING...</div>
-                            <i className="fa fa-spinner fa-spin"></i>
-                        </div>
+            <div id="extjs_app" style={{ border: 'solid 5px red' }}>
+                <Counter />
+                <div className="launching">
+                    <div id="splash">
+                        <div id="theLoadingText">LOADING...</div>
+                        <i className="fa fa-spinner fa-spin"></i>
                     </div>
                 </div>
             </div>
