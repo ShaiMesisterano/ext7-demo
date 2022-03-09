@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlueButton = () => {
+const BlueButton: React.FC = () => {
     console.log('Hello from 🔵 button');
 
     return (

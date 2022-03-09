@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
 const portfinder = require('portfinder');
-const reactRules = require('./components/rules');
+const {reactResolve,reactRules} = require('./components/rules');
 
 module.exports = async function (env) {
   
@@ -11,7 +11,7 @@ module.exports = async function (env) {
   const rules = [
     {test: /.(js)$/, use: {loader: 'babel-loader'}}
   ]
-  const resolve = {}
+
   const host = '0.0.0.0'
   const stats = 'none'
 
@@ -86,7 +86,7 @@ module.exports = async function (env) {
       module: {
         rules: [...rules, ...reactRules]
       },
-      resolve: resolve,
+      resolve: {...reactResolve},
       performance: { hints: false },
       stats: 'none',
       optimization: { emitOnErrors: false },
