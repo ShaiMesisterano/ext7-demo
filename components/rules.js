@@ -1,3 +1,5 @@
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 const rules = [
   { test: /.(js)$/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env', '@babel/preset-react'] } } },
   {
@@ -7,9 +9,16 @@ const rules = [
   },
 ]
 
-const resolve = { extensions: ['.tsx', '.ts', '.js'], }
+const resolve = { extensions: ['.tsx', '.ts', '.js'], };
+
+const plugins = [
+  new ESLintPlugin({
+    extensions: ["js", "jsx", "ts", "tsx"],
+  }),
+];
 
 module.exports = {
   reactRules: rules,
-  reactResolve: resolve
+  reactResolve: resolve,
+  reactPlugins: plugins
 };
