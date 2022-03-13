@@ -1,11 +1,11 @@
 import React from 'react';
 
-const BlueButton = () => {
+const BlueButton = ({children, textColor, suffix}) => {
     console.log('Hello from 🔵 button');
 
     return (
-        <button style={{background: 'blue', color: 'white'}}>
-            I'm not BLUE!!!
+        <button style={{background: 'blue', color: textColor}}>
+            {children || "I'm not BLUE"} {suffix}
         </button>
     )
 }
