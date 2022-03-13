@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtWebpackPlugin = require('@sencha/ext-webpack-plugin');
 const portfinder = require('portfinder');
-const {reactResolve,reactRules} = require('./components/rules');
+const {reactResolve,reactRules, reactPlugins} = require('./components/rules');
 
 module.exports = async function (env) {
   
@@ -56,6 +56,7 @@ module.exports = async function (env) {
   portfinder.basePort = (env && env.port) || 1962
   return portfinder.getPortPromise().then(port => {
     const plugins = [
+      ...reactPlugins,
       new ExtWebpackPlugin({
         framework: framework,
         toolkit: toolkit,
