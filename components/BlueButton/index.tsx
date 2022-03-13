@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlueButton = ({children, textColor, suffix}) => {
+const BlueButton: React.FC<{textColor: string, suffix: string}> = ({children, textColor, suffix}) => {
     console.log('Hello from 🔵 button');
 
     return (
