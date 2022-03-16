@@ -20,7 +20,7 @@
   },
   "homepage": "http://www.sencha.com",
   "lint-staged": {
-    "*.tsx": [
+    "./**/*.{js,jsx,ts,tsx,css,md,json}": [
       "eslint --fix",
       "prettier --write --config ./.prettierrc"
     ]
@@ -43,7 +43,8 @@
     "core-js": "^3.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "typescript": "^4.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -69,7 +70,6 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.3",
     "eslint-plugin-react-hooks": "^4.3.0",
