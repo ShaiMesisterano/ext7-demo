@@ -9,13 +9,16 @@
       "react-hooks"
     ],
     "extends": [
+      "eslint:recommended",
       "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
     ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
-      "react/prop-types": "off"
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off"
     },
     "settings": {
       "react": {
