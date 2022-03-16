@@ -20,7 +20,7 @@
   },
   "homepage": "http://www.sencha.com",
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,css,md,json}": [
+    "./**/*.{js,jsx,ts,tsx,css}": [
       "eslint --fix",
       "prettier --write --config ./.prettierrc"
     ]
@@ -31,7 +31,7 @@
     "dev": "webpack-dev-server --env profile=desktop --env browser=yes --env verbose=no",
     "build": "npm run clean && cross-env webpack --env profile=desktop --env environment=production --env treeshake=yes",
     "build:testing": "npm run clean && cross-env webpack --env profile=desktop --env treeshake=yes --env cmdopts=--testing",
-    "storybook": "start-storybook -p 6000",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint-staged": "lint-staged"
   },
@@ -70,6 +70,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "cross-env": "^5.2.0",
     "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.3",
     "eslint-plugin-react-hooks": "^4.3.0",
