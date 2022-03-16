@@ -20,7 +20,7 @@
   },
   "homepage": "http://www.sencha.com",
   "lint-staged": {
-    "./**/*.{js,jsx,ts,tsx,css}": [
+    "components/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --write --config ./.prettierrc"
     ]
