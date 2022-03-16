@@ -6,8 +6,6 @@ import {Counter} from '..';
 const Wrapper = () => {
   console.log('*** Hello from wrapper');
 
-  console.log('*** Hello from wrapper');
-
   return (
     <Provider store={store}>
       <div id="extjs_app" style={{border: 'solid 5px red', width: '100%', height: '100%'}}>
