@@ -34,7 +34,7 @@
     "dev": "webpack-dev-server --env profile=desktop --env browser=yes --env verbose=no",
     "build": "npm run clean && cross-env webpack --env profile=desktop --env environment=production --env treeshake=yes",
     "build:testing": "npm run clean && cross-env webpack --env profile=desktop --env treeshake=yes --env cmdopts=--testing",
-    "storybook": "start-storybook -p 6000",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
