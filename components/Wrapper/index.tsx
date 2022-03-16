@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Counter } from "..";
 
 const Wrapper = () => {
-    console.log('*** Hello from wrapper');
+    console.log("*** Hello from wrapper");
 
     return (
         <Provider store={store}>
